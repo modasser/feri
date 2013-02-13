@@ -17,7 +17,7 @@ class DemoController extends Controller
      * @Template()
      */
     public function indexAction()
-    {
+    {        
         return array();
     }
 

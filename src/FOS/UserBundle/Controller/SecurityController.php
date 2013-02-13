@@ -19,9 +19,10 @@ class SecurityController extends ContainerAware
 {
     public function loginAction(Request $request)
     {
+         
         /** @var $session \Symfony\Component\HttpFoundation\Session\Session */
         $session = $request->getSession();
-
+        
         // get the error if any (works with forward and redirect -- see below)
         if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
             $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
@@ -60,6 +61,7 @@ class SecurityController extends ContainerAware
      */
     protected function renderLogin(array $data)
     {
+        
         $template = sprintf('FOSUserBundle:Security:login.html.%s', $this->container->getParameter('fos_user.template.engine'));
 
         return $this->container->get('templating')->renderResponse($template, $data);
