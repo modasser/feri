@@ -1,0 +1,52 @@
+{
+    "name": "sylius/resource-bundle",
+    "type": "symfony-bundle",
+    "description": "Resource component for Sylius.",
+    "keywords": ["resource", "storage", "persistence", "sylius"],
+    "homepage": "http://sylius.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Jędrzejewski",
+            "email": "pjedrzejewski@diweb.pl",
+            "homepage": "http://pjedrzejewski.com"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/Sylius/SyliusResourceBundle/contributors"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+
+        "symfony/framework-bundle":        "~2.1",
+        "friendsofsymfony/rest-bundle":    "0.11.*@dev",
+        "jms/serializer-bundle":           "0.11.*",
+        "white-october/pagerfanta-bundle": "1.0.*@dev"
+    },
+    "require-dev": {
+        "twig/twig":            "~1.11",
+        "doctrine/orm":         "~2.3",
+        "doctrine/mongodb-odm": "1.0.*@dev",
+        "phpspec/phpspec2":     "dev-develop",
+        "phpspec/php-diff":     "dev-master"
+    },
+    "suggest": {
+        "fsc/hateoas-bundle":   "0.3.x-dev",
+        "doctrine/orm":         "~2.3",
+        "doctrine/mongodb-odm": "1.0.*@dev"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "Sylius\\Bundle\\ResourceBundle\\": "" }
+    },
+    "target-dir": "Sylius/Bundle/ResourceBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2.x-dev"
+        }
+    }
+}
